@@ -1,16 +1,10 @@
 import { AiOutlineAim } from "react-icons/ai"
-import { FaHome, FaListAlt, FaSearch, FaUser } from "react-icons/fa"
-import { MdOutlineTravelExplore } from "react-icons/md"
+import { FaSearch } from "react-icons/fa"
 
 function App() {
 
   return (
-    <div className="flex flex-col h-dvh from-gray-100 to-white bg-linear-to-l">
-      <header className="flex items-center justify-end py-2 px-4">
-        <button className="text-sm">Login</button>
-      </header>
-
-      <main className="h-screen px-4 flex flex-col gap-12 items-center justify-center">
+      <>
 
         <img src="./imgs/city.svg" />
 
@@ -35,28 +29,7 @@ function App() {
           </div>
         </form>
 
-      </main>
-
-      <footer className="fixed bottom-0 py-2 px-4 w-full flex flex-row items-center justify-around bg-white text-gray-600 text-sm">
-        <a href="#" className="flex flex-col justify-center items-center text-green-400">
-          <FaHome />
-          <span>Início</span>
-        </a>
-        <a href="#" className="flex flex-col justify-center items-center">
-          <FaListAlt />
-          <span>Denúncias</span>
-        </a>
-        <a href="#" className="flex flex-col justify-center items-center">
-          <MdOutlineTravelExplore />
-          <span>Explorar</span>
-        </a>
-        <a href="#" className="flex flex-col justify-center items-center">
-          <FaUser />
-          <span>Perfil</span>
-        </a>
-      </footer>
-
-    </div>
+      </>
   )
 }
 
