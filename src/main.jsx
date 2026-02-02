@@ -7,6 +7,7 @@ import Reports from './pages/Reports/Reports.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Feed from './pages/Feed/Feed.jsx';
 import Login from './pages/Login/Login.jsx';
+import Register from './pages/Register/Register.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
       </Route>
       
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
 
     </Routes>
   </BrowserRouter>,
