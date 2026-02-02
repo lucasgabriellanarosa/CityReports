@@ -3,7 +3,7 @@ import { FaAngleRight, FaLightbulb } from "react-icons/fa"
 function Reports() {
   return (
     <>
-      <ul className="h-full py-8 flex flex-col gap-6">
+      <ul className="h-full py-8 flex flex-col gap-4">
 
         <li className="flex flex-row justify-center items-center bg-white py-2 px-4 gap-4 rounded-md shadow-sm shadow-gray-200">
           <span className="bg-yellow-200 text-yellow-600 rounded-sm p-2">
