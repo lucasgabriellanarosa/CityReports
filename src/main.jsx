@@ -6,6 +6,7 @@ import { Layout } from './pages/Layout/Layout.jsx';
 import Reports from './pages/Reports/Reports.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 import Feed from './pages/Feed/Feed.jsx';
+import Login from './pages/Login/Login.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -16,6 +17,9 @@ createRoot(document.getElementById('root')).render(
         <Route path="/feed" element={<Feed />} />
         <Route path="/profile" element={<Profile />} />
       </Route>
+      
+      <Route path="/login" element={<Login />} />
+
     </Routes>
   </BrowserRouter>,
 )
