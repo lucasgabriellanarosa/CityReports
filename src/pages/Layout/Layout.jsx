@@ -4,7 +4,7 @@ import { MdOutlineTravelExplore } from "react-icons/md"
 import { NavLink, Outlet, useLocation } from "react-router";
 
 export const Layout = () => {
-  
+
   const location = useLocation()
 
   const getPageTitle = () => {
@@ -16,19 +16,19 @@ export const Layout = () => {
     };
     return titles[location.pathname] || 'TESTE';
   };
-    
+
 
   const linkClass = ({ isActive }) =>
     `flex flex-col justify-center items-center transition-colors ${isActive ? 'text-green-400' : 'text-gray-400 hover:text-gray-600'
     }`;
-    
+
   return (
     <div className="flex flex-col h-dvh from-gray-100 to-white bg-linear-to-l">
       <header className="flex items-center justify-start px-4 bg-white shadow-sm shadow-gray-200 py-4">
         <h1 className="text-base font-bold tracking-widest">{getPageTitle()}</h1>
       </header>
 
-      <main className="h-screen px-4 flex flex-col gap-12 items-center justify-center">
+      <main className="flex-1 overflow-y-auto px-4 py-6">
         <Outlet />
       </main>
 
