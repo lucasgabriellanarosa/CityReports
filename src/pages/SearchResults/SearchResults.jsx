@@ -70,7 +70,7 @@ function SearchResults() {
 
   const handleCitySelect = (city) => {
     // Navegar para a página da cidade específica
-    navigate(`/cidade/${city.id}`, {
+    navigate(`/city/${city.id}`, {
       state: { 
         cityData: city 
       }
