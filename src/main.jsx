@@ -10,6 +10,7 @@ import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
 import SearchResults from './pages/SearchResults/SearchResults.jsx';
 import City from './pages/City/City.jsx';
+import CityMap from './pages/CityMap/CityMap.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/profile" element={<Profile />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/city/:cityId" element={<City />} />
+        <Route path="/map/:cityId" element={<CityMap />} />
 
       </Route>
       

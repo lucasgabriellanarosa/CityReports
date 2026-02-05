@@ -1,22 +1,40 @@
 import { FaHome, FaListAlt, FaUser } from "react-icons/fa"
 import { MdOutlineTravelExplore } from "react-icons/md"
 
-import { NavLink, Outlet, useLocation } from "react-router";
+import { matchPath, NavLink, Outlet, useLocation } from "react-router";
 
 export const Layout = () => {
 
   const location = useLocation()
 
   const getPageTitle = () => {
-    const titles = {
+    const pathname = location.pathname;
+
+    // Rotas exatas
+    const exactTitles = {
       '/': 'Denunciar',
       '/reports': 'Minhas Denúncias',
       '/feed': 'Explorar',
-      '/profile': 'Perfil'
+      '/profile': 'Perfil',
+      '/search': 'Pesquisa',
     };
-    return titles[location.pathname] || 'TESTE';
-  };
 
+    // Verifica rotas exatas primeiro
+    if (exactTitles[pathname]) {
+      return exactTitles[pathname];
+    }
+
+    // Rotas dinâmicas
+    if (matchPath('/city/:cityId', pathname)) {
+      return 'Cidade';
+    }
+
+    if (matchPath('/map/:cityId', pathname)) {
+      return 'Mapa';
+    }
+
+    return 'Página';
+  };
 
   const linkClass = ({ isActive }) =>
     `flex flex-col justify-center items-center transition-colors ${isActive ? 'text-green-400' : 'text-gray-400 hover:text-gray-600'
@@ -28,11 +46,11 @@ export const Layout = () => {
         <h1 className="text-base font-bold tracking-widest">{getPageTitle()}</h1>
       </header>
 
-      <main className="flex-1 overflow-y-auto px-4 py-6">
+      <main className="flex-1 overflow-y-auto px-4">
         <Outlet />
       </main>
 
-      <footer className="fixed bottom-0 py-2 px-4 w-full flex flex-row items-center justify-around bg-white text-gray-600 text-sm">
+      <footer className="fixed bottom-0 py-2 px-4 w-full flex flex-row items-center justify-around bg-white text-gray-600 text-sm z-1000">
         <NavLink to='/' className={linkClass}>
           <FaHome />
           <span>Início</span>

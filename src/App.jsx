@@ -30,7 +30,7 @@ function App() {
       <form onSubmit={handleSubmit} className="flex flex-col w-full gap-6">
         <div className="flex flex-row justify-center items-center bg- px-4 gap-4 py-3 bg-white shadow-sn rounded-xl border border-gray-200">
 
-          <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex grow text-sm" type="text" placeholder="Digite o nome do município..." required />
+          <input value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="flex grow text-sm outline-0" type="text" placeholder="Digite o nome do município..." required />
           <button type="submit" className="text-sm text-green-300">
             <FaSearch />
           </button>

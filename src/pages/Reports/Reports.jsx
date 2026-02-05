@@ -2,7 +2,7 @@ import { FaAngleRight, FaLightbulb } from "react-icons/fa"
 
 function Reports() {
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="flex flex-col gap-4 py-4">
 
       <li className="flex flex-row justify-center items-center bg-white py-2 px-4 gap-4 rounded-md shadow-sm shadow-gray-200">
         <span className="bg-yellow-200 text-yellow-600 rounded-sm p-2">

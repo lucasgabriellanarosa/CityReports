@@ -5,7 +5,7 @@ const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
 
 async function getCityImageFromUnsplash(cityName, stateName) {
   try {
-    const query = `${cityName} ${stateName} brasil city`;
+    const query = `${cityName} ${stateName} brasil cidade`;
     const response = await fetch(
       `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape&client_id=${UNSPLASH_ACCESS_KEY}`
     );

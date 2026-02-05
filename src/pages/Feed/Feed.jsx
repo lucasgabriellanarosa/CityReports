@@ -1,8 +1,8 @@
-import { FaAngleRight, FaLightbulb, FaMapPin } from "react-icons/fa"
+import { FaMapPin } from "react-icons/fa"
 
 function Feed() {
   return (
-    <ul className="flex flex-col gap-4">
+    <ul className="flex flex-col gap-4 py-4">
 
       <li className="flex flex-col justify-center bg-white py-4 px-4 gap-4 rounded-md shadow-sm shadow-gray-200 text-xs">
 
