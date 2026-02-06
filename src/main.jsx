@@ -11,6 +11,7 @@ import Register from './pages/Register/Register.jsx';
 import SearchResults from './pages/SearchResults/SearchResults.jsx';
 import City from './pages/City/City.jsx';
 import CityMap from './pages/CityMap/CityMap.jsx';
+import CreateReport from './pages/CreateReport/CreateReport.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/search" element={<SearchResults />} />
         <Route path="/city/:cityId" element={<City />} />
         <Route path="/map/:cityId" element={<CityMap />} />
+        <Route path="/create-report" element={<CreateReport />} />
 
       </Route>
       

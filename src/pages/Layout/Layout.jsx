@@ -17,6 +17,7 @@ export const Layout = () => {
       '/feed': 'Explorar',
       '/profile': 'Perfil',
       '/search': 'Pesquisa',
+      '/create-report': 'Criar Denúncia',
     };
 
     // Verifica rotas exatas primeiro
@@ -41,7 +42,7 @@ export const Layout = () => {
     }`;
 
   return (
-    <div className="flex flex-col h-dvh from-gray-100 to-white bg-linear-to-l">
+    <div className="flex flex-col h-dvh bg-gray-50">
       <header className="flex items-center justify-start px-4 bg-white shadow-sm shadow-gray-200 py-4">
         <h1 className="text-base font-bold tracking-widest">{getPageTitle()}</h1>
       </header>

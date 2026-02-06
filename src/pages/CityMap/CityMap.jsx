@@ -4,10 +4,8 @@ import { Link, useLocation, useParams } from 'react-router';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Ícones
 import { FaSearch, FaMapMarkerAlt, FaPlus, FaLocationArrow } from 'react-icons/fa';
 
-// Correção de ícone padrão do Leaflet
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
@@ -26,11 +24,8 @@ function MapPage() {
 
     const [position, setPosition] = useState(null);
     const [address, setAddress] = useState({ street: "Carregando...", details: "" });
-    const [loading, setLoading] = useState(false); // Adicionado o estado de loading que faltava
+    const [loading, setLoading] = useState(false); 
 
-    // --- FUNÇÕES AUXILIARES ---
-
-    // Componente para lidar com cliques no mapa
     function LocationMarker() {
         useMapEvents({
             click(e) {
@@ -42,7 +37,6 @@ function MapPage() {
         return position ? <Marker position={position} /> : null;
     }
 
-    // Função para buscar endereço por coordenadas
     const fetchAddress = async (lat, lng) => {
         setLoading(true);
         try {
@@ -60,7 +54,6 @@ function MapPage() {
         }
     };
 
-    // --- EFEITOS ---
 
     useEffect(() => {
         const getCityCoordinates = async () => {
@@ -92,7 +85,7 @@ function MapPage() {
 
     if (!position) {
         return (
-            <div className="h-screen w-full flex items-center justify-center bg-gray-50">
+            <div className="w-100vw flex h-[calc(100dvh-105px)] items-center justify-center">
                 <div className="animate-pulse text-green-600 font-bold">Localizando {cityData?.nome}...</div>
             </div>
         );
